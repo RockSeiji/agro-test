@@ -29,3 +29,7 @@ API RESTful para gerenciamento de produtores rurais, propriedades, safras e cult
 2. Caso seja a primeira execução rodar o comando `npm run prisma-init` para criar a estrutura inicial do banco de dados
 2. Rode `npm run start` ou `npm run seed` para popular dados
 3. Acesse `http://localhost:3000/api` para a documentação Swagger
+
+## Testes
+- Para executar os testes unitários e e2e execute o comando: npm run test
+- Para visualizar a cobertura execute o comando: npm run test:cov

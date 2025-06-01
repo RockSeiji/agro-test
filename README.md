@@ -15,7 +15,7 @@ API RESTful para gerenciamento de produtores rurais, propriedades, safras e cult
 - Testes com Jest
 - Dados mockados com Faker
 
-## Preparando o container Kubernetes para o banco postgres (Caso ja tenha o tudo configurado pule para o passo 6)
+## Preparando o container Kubernetes para o banco postgres (Caso ja tenha tudo configurado pule para o passo 6)
 1. Instale o Chocolatey, caso não saiba pode seguir esse tutorial: https://chocolatey.org/install#individual
 2. Execute o seguinte comando no Powershell para instalar o minikube: choco install minikube
 3. Execute o seguinte comando no Powershell para instalar o cliente do kubernetes: choco install kubernetes-cli

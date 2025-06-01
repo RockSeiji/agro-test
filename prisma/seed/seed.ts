@@ -4,8 +4,6 @@ import { faker } from '@faker-js/faker';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Gerando dados...');
-
   for (let i = 0; i < 10; i++) {
     const producer = await prisma.producer.create({
       data: {
@@ -53,8 +51,6 @@ async function main() {
       }
     }
   }
-
-  console.log('✅ Dados mockados gerados com sucesso!');
 }
 
 main()

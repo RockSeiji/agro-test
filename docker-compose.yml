@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: agro_usr
+      POSTGRES_PASSWORD: agro_pwd
+      POSTGRES_DB: agro
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://agro_usr:agro_pwd@db:5432/agro
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+volumes:
+  db_data:
